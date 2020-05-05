@@ -74,11 +74,11 @@ class Agent():
             action_values = self.qnetwork_local(state)
         self.qnetwork_local.train()
 
-        # Epsilon-greedy action selection
+        # Epsilon-greedy action selection (return np.int32)
         if random.random() > eps:
-            return np.argmax(action_values.cpu().data.numpy())
+            return np.argmax(action_values.cpu().data.numpy()).astype(int)
         else:
-            return random.choice(np.arange(self.action_size))
+            return random.choice(np.arange(self.action_size)).astype(int)
 
     def learn(self, experiences, gamma):
         """Update value parameters using given batch of experience tuples.
