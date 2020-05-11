@@ -1,4 +1,5 @@
 ## Instructions
+[<img src="https://user-images.githubusercontent.com/10624937/42135619-d90f2f28-7d12-11e8-8823-82b970a54d7e.gif" width="500"/>](image.png)
 1. `python==3.6` is required due to the `unityagents` dependency
 2. Run `Navigation.ipynb` to train model
 
